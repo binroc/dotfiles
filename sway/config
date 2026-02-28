@@ -7,6 +7,8 @@
 ### Variables
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
+# win key, used for thumb typing combos
+set $win Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -89,6 +91,8 @@ input * {
 
     # Kill focused window
     bindsym $mod+Shift+q kill
+    bindsym $win+Backspace kill
+    bindsym $mod+Backspace kill
 
     # Start your launcher
     bindsym $mod+Space exec $menu
@@ -135,10 +139,21 @@ input * {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+    # Ditto, with win key and hjkl
+    bindsym $win+$left move left
+    bindsym $win+$down move down
+    bindsym $win+$up move up
+    bindsym $win+$right move right
+    # Ditto, with win key and arrows
+    bindsym $win+Left move left
+    bindsym $win+Down move down
+    bindsym $win+Up move up
+    bindsym $win+Right move right
+
 #
 # Workspaces:
 #
-    # Switch to workspace
+    # Switch to workspace, both numbers and uiop
     bindsym $mod+1 workspace number 1
     bindsym $mod+u workspace number 1
     bindsym $mod+2 workspace number 2
@@ -153,17 +168,31 @@ input * {
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
-    # Move focused container to workspace
+    # Move focused container to workspace both numbers and uiop
     bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $win+1 move container to workspace number 1
+    bindsym $win+u move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $win+2 move container to workspace number 2
+    bindsym $win+i move container to workspace number 2
     bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $win+3 move container to workspace number 3
+    bindsym $win+o move container to workspace number 3
     bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $win+4 move container to workspace number 4
+    bindsym $win+p move container to workspace number 4
     bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $win+5 move container to workspace number 5
     bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $win+6 move container to workspace number 6
     bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $win+7 move container to workspace number 7
     bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $win+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $win+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
+    bindsym $win+0 move container to worskpace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
