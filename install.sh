@@ -10,6 +10,9 @@ ln -sf "$HOME/dotfiles/sway/config" \
 ln -sf "$HOME/dotfiles/tmux/tmux.conf" \
 	"$HOME/.tmux.conf"
 
+ln -sf "$HOME/dotfiles/shell/.bashrc" \
+	"$HOME/.bashrc"
+
 echo "dotfiles installed, keyboard goes Brrrr.... :)"
 
 
