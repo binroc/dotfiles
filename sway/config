@@ -112,6 +112,9 @@ input * {
     # mouse button for dragging.
     floating_modifier $mod normal
 
+    # Lock Screen
+    bindsym $mod+Shift+s exec 'swaylock -f -c 000000'
+
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
